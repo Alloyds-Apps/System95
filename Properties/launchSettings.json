@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "System95 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "System95 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
