@@ -8,7 +8,9 @@
     xmlns:winex="using:WinUIEx"
     mc:Ignorable="d"
     IsMaximizable="False"
+    IsResizable="False"
     Title="System95">
+    
     <Grid>
         <Grid x:Name="AppTitleBar" Background="Transparent" Height="32" VerticalAlignment="Top">
             <StackPanel x:Name="TitleBar" Orientation="Horizontal" Background="Transparent">
