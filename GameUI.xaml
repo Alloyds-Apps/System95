@@ -1,0 +1,19 @@
+<Page
+    x:Class="System95.GameUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:System95"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Black"
+    RequestedTheme="Dark">
+
+    <Grid>
+        <StackPanel x:Name="GamePanel" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock x:Name="TextBlock1" Opacity="0" FontSize="50"/>
+            <TextBlock x:Name="TextBlock2" Opacity="0" FontSize="50" Margin="0,5,0,0"/>
+        </StackPanel>
+    </Grid>
+
+</Page>
