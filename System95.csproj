@@ -12,9 +12,17 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <UseWPF>False</UseWPF>
 	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\chicagoflf.ttf" />
+    <Content Remove="Assets\progresspixel.ttf" />
+    <Content Remove="C:\Users\Radist\.nuget\packages\ivirius.ui.controls\0.1.1-prerelease\contentFiles\any\net8.0-windows10.0.19041\Ivirius.png" />
+    <Content Remove="C:\Users\Radist\.nuget\packages\ivirius.ui.controls\0.1.1-prerelease\contentFiles\any\net8.0-windows10.0.19041\Themes\UAC.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="GameUI.xaml" />
+    <None Remove="JustForTesting\System95OS.xaml" />
     <None Remove="Styles\MenuFlyout.xaml" />
   </ItemGroup>
 	
@@ -34,9 +42,13 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.WinUI.Animations" Version="8.0.240109" />
-    <PackageReference Include="Ivirius.UI.Controls" Version="0.0.2-prerelease" />
+    <PackageReference Include="Ivirius.UI.Controls" Version="0.1.1-prerelease" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240607001" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WinUICommunity.Components" Version="6.9.0" />
+    <PackageReference Include="WinUICommunity.Core" Version="6.9.0" />
+    <PackageReference Include="WinUICommunity.Win2D" Version="6.9.0" />
     <PackageReference Include="WinUIEx" Version="2.3.4" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
@@ -56,6 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Styles\MenuFlyout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="JustForTesting\System95OS.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

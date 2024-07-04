@@ -6,14 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="Black"
+    Background="Transparent"
     RequestedTheme="Dark">
 
-    <Grid>
-        <StackPanel x:Name="GamePanel" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock x:Name="TextBlock1" Opacity="0" FontSize="50"/>
-            <TextBlock x:Name="TextBlock2" Opacity="0" FontSize="50" Margin="0,5,0,0"/>
-        </StackPanel>
-    </Grid>
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Button x:Name="StartSystem95OS" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Click="StartSystem95OS_Click">
+            <TextBlock Text="System95"/>
+        </Button>
+    </StackPanel>
 
 </Page>

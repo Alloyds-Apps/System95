@@ -228,7 +228,7 @@
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="LightGray"/>
+                                <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="{StaticResource TextFillColorDisabled}"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E5E5E5"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Black"/>
@@ -330,7 +330,7 @@
                                 <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                                <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="LightGray"/>
+                                <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="{StaticResource TextFillColorDisabled}"/>
                                 <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
                                 <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E81123"/>
                                 <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
