@@ -620,10 +620,13 @@
                     </Grid>
                 </ToggleButton>
             </StackPanel>
-            <StackPanel x:Name="SysTray" HorizontalAlignment="Right">
-                <Border x:Name="TrayBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White"/>
-                <Border x:Name="TrayBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black"/>
-            </StackPanel>
+            <Grid x:Name="SysTray" HorizontalAlignment="Right" Background="#C0C0C0" Width="121" VerticalAlignment="Center" Height="35" Margin="0,0,4,3">
+                <Border x:Name="TrayBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="#808080"/>
+                <StackPanel x:Name="TrayItems" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock x:Name="Time" Text="10:00" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,4,0"/>
+                </StackPanel>
+                <Border x:Name="TrayBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="#E9E9E9"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
