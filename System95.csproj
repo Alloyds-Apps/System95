@@ -16,12 +16,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Assets\chicagoflf.ttf" />
+    <Content Remove="Assets\Fonts\marlett.ttf" />
     <Content Remove="Assets\progresspixel.ttf" />
     <Content Remove="C:\Users\Radist\.nuget\packages\ivirius.ui.controls\0.1.1-prerelease\contentFiles\any\net8.0-windows10.0.19041\Ivirius.png" />
     <Content Remove="C:\Users\Radist\.nuget\packages\ivirius.ui.controls\0.1.1-prerelease\contentFiles\any\net8.0-windows10.0.19041\Themes\UAC.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Assets\Icons\soundicon.off.png" />
+    <None Remove="Assets\Icons\soundicon.png" />
+    <None Remove="Assets\Icons\starticon_6.png" />
+    <None Remove="Assets\Images\mask_alpha.png" />
     <None Remove="GameUI.xaml" />
+    <None Remove="JustForTesting\Pages\PleaseWaitRestart.xaml" />
+    <None Remove="JustForTesting\Pages\PleaseWaitShutDown.xaml" />
+    <None Remove="JustForTesting\Pages\SafeToTurnOff.xaml" />
     <None Remove="JustForTesting\System95OS.xaml" />
     <None Remove="Styles\MenuFlyout.xaml" />
   </ItemGroup>
@@ -62,6 +70,16 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="JustForTesting\Pages\PleaseWaitRestart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="JustForTesting\Pages\SafeToTurnOff.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="GameUI.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -73,6 +91,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="JustForTesting\System95OS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="JustForTesting\Pages\PleaseWaitShutDown.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

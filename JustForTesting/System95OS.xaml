@@ -9,9 +9,227 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid>
+    <Grid x:Name="RootGrid">
+        <Grid x:Name="ShutDownWindow" Canvas.ZIndex="1" Background="{StaticResource AcrylicBackgroundFillColorBaseBrush}" Visibility="Collapsed">
+            <Grid x:Name="WindowItself" Width="338" Height="240">
+                <Border x:Name="WindowBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White"/>
+                <Grid x:Name="WindowGrid" Background="#C0C0C0" VerticalAlignment="Stretch" Margin="2,2,1,1" HorizontalAlignment="Stretch">
+                    <Grid x:Name="WindowTitleBar" Background="#000080" Height="29" Width="332" Margin="0,1,2,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                        <TextBlock Text="Restart/Shutdown" HorizontalAlignment="Left" FontWeight="Black" Margin="5,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel"/>
+                        <Button x:Name="CloseWindow" IsTabStop="False" UseSystemFocusVisuals="False" Height="21" Width="25" Margin="0,5,4,3" HorizontalAlignment="Right" Click="CloseWindow_Click">
+                            <Button.Resources>
+                                <ResourceDictionary>
+                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackground" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                                </ResourceDictionary>
+                            </Button.Resources>
+                            <FontIcon FontFamily="ms-appx:///Assets/Fonts/marlett.tff#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                                                    <Border x:Name="BorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black">
+                                                        <Border x:Name="BorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White">
+                                                            <ContentPresenter/>
+                                                        </Border>
+                                                    </Border>
+                                                    <VisualStateManager.VisualStateGroups>
+                                                        <VisualStateGroup x:Name="CommonStates">
+                                                            <VisualState x:Name="Normal">
+                                                                <Storyboard>
+                                                                    <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="PointerOver">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Pressed">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                        </VisualStateGroup>
+                                                    </VisualStateManager.VisualStateGroups>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                    <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                        <Image Margin="0,0,0,33" Width="56" Height="56" Source="ms-appx:///Assets/Icons/starticon_6.png"/>
+                        <Button x:Name="RestartButton" Click="RestartButton_Click" Width="140" Height="33" Margin="0,0,0,26" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                        <Button.Resources>
+                            <ResourceDictionary>
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="#C0C0C0"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#C0C0C0"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#C0C0C0"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                            </ResourceDictionary>
+                        </Button.Resources>
+                        <TextBlock FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Text="Restart" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                                                <Border x:Name="BorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black">
+                                                    <Border x:Name="BorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White">
+                                                        <ContentPresenter/>
+                                                    </Border>
+                                                </Border>
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup x:Name="CommonStates">
+                                                        <VisualState x:Name="Normal">
+                                                            <Storyboard>
+                                                                <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                        <VisualState x:Name="PointerOver">
+                                                            <Storyboard>
+                                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                </ObjectAnimationUsingKeyFrames>
+                                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                </ObjectAnimationUsingKeyFrames>
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                        <VisualState x:Name="Pressed">
+                                                            <Storyboard>
+                                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                </ObjectAnimationUsingKeyFrames>
+                                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                             Storyboard.TargetProperty="BorderBrush">
+                                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                </ObjectAnimationUsingKeyFrames>
+                                                            </Storyboard>
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        </Button>
+                        <Button x:Name="ShutDownButton" x:FieldModifier="public" Click="ShutDownButton_Click" Width="140" Height="33" Margin="0,0,0,15" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                            <Button.Resources>
+                                <ResourceDictionary>
+                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackground" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                                </ResourceDictionary>
+                            </Button.Resources>
+                            <TextBlock FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Text="Shutdown" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                                                    <Border x:Name="BorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black">
+                                                        <Border x:Name="BorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White">
+                                                            <ContentPresenter/>
+                                                        </Border>
+                                                    </Border>
+                                                    <VisualStateManager.VisualStateGroups>
+                                                        <VisualStateGroup x:Name="CommonStates">
+                                                            <VisualState x:Name="Normal">
+                                                                <Storyboard>
+                                                                    <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="PointerOver">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                           Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                           Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Pressed">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                           Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                           Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                        </VisualStateGroup>
+                                                    </VisualStateManager.VisualStateGroups>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+                <Border x:Name="WindowBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black"/>
+            </Grid>
+        </Grid>
         <Grid x:Name="Desktop" Background="#017777" Margin="0,0,0,43">
-            
+
         </Grid>
         <Grid x:Name="StartMenu" Canvas.ZIndex="1" Background="#C0C0C0" Height="257" Width="246" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,39">
             <Border x:Name="StartBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White"/>
@@ -440,7 +658,7 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button x:Name="ShutDown" CornerRadius="0" IsTabStop="False" UseSystemFocusVisuals="False" HorizontalContentAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Height="42" Width="199">
+                <Button x:Name="ShutDown" CornerRadius="0" IsTabStop="False" Click="ShutDown_Click" UseSystemFocusVisuals="False" HorizontalContentAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Height="42" Width="199">
                     <Button.Resources>
                         <ResourceDictionary>
                             <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
@@ -526,9 +744,9 @@
             </StackPanel>
             <Border x:Name="StartBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black"/>
         </Grid>
-        <Grid x:Name="Taskbar" Background="#BDBDBD" BorderBrush="#E9E9E9" BorderThickness="0,2,0,0" VerticalAlignment="Bottom" Height="43">
+        <Grid x:Name="Taskbar" Background="#BDBDBD" PointerReleased="Taskbar_PointerReleased" PointerPressed="Taskbar_PointerPressed" BorderBrush="#E9E9E9" BorderThickness="0,2,0,0" VerticalAlignment="Bottom" Height="43">
             <StackPanel x:Name="StartButtonPanel">
-                <ToggleButton x:Name="StartButton" Checked="StartButton_Checked" Unchecked="StartButton_Unchecked" Margin="5,3,0,4" Background="#C0C0C0" IsTabStop="False" UseSystemFocusVisuals="False" CornerRadius="0" Height="35" Width="94">
+                <ToggleButton x:Name="StartButton" HorizontalContentAlignment="Left" Checked="StartButton_Checked" Unchecked="StartButton_Unchecked" Margin="5,3,0,4" Background="#C0C0C0" IsTabStop="False" UseSystemFocusVisuals="False" CornerRadius="0" Height="35" Width="94">
                     <ToggleButton.Style>
                         <Style TargetType="ToggleButton">
                             <Setter Property="Template">
@@ -615,15 +833,48 @@
                             </Setter>
                         </Style>
                     </ToggleButton.Style>
-                    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                        <TextBlock Text="Begin" FontWeight="Black" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="ms-appx:///Assets/Fonts/chicagoflf.ttf#ChicagoFLF" FontSize="16" Foreground="Black"/>
-                    </Grid>
+                    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Horizontal">
+                        <TextBlock Text="Begin" FontWeight="Black" VerticalAlignment="Center" Margin="3,0,0,0" HorizontalAlignment="Left" FontFamily="ms-appx:///Assets/Fonts/chicagoflf.ttf#ChicagoFLF" FontSize="16" Foreground="Black"/>
+                    </StackPanel>
                 </ToggleButton>
             </StackPanel>
-            <Grid x:Name="SysTray" HorizontalAlignment="Right" Background="#C0C0C0" Width="121" VerticalAlignment="Center" Height="35" Margin="0,0,4,3">
+            <Grid x:Name="SysTray" HorizontalAlignment="Right" Background="#C0C0C0" Width="146" VerticalAlignment="Center" Height="35" Margin="0,0,4,3">
                 <Border x:Name="TrayBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="#808080"/>
-                <StackPanel x:Name="TrayItems" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <TextBlock x:Name="Time" Text="10:00" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,4,0"/>
+                <StackPanel x:Name="TrayItems" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Button x:Name="GameLanguage" Background="#000080" BorderBrush="Transparent" IsTabStop="False" UseSystemFocusVisuals="False" Height="30" Width="30" Margin="2,-1,0,0" CornerRadius="0">
+                        <Button.Resources>
+                            <ResourceDictionary>
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="#000080"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#000080"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#000080"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                            </ResourceDictionary>
+                        </Button.Resources>
+                        <TextBlock Text="EN" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="-6,0,-6,0"/>
+                    </Button>
+                    <Button x:Name="SoundToggle" Background="Transparent" BorderBrush="Transparent" IsTabStop="False" UseSystemFocusVisuals="False" Height="35" Width="35">
+                        <Image Source="ms-appx:///Assets/Icons/soundicon.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" Margin="-7,-5,-13,-2"/>
+                        <Button.Resources>
+                            <ResourceDictionary>
+                                <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                            </ResourceDictionary>
+                        </Button.Resources>
+                    </Button>
+                    <TextBlock x:Name="Time" Text="10:00 AM" Foreground="Black" HorizontalAlignment="Right" FontSize="17" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="0,8,0,0"/>
                 </StackPanel>
                 <Border x:Name="TrayBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="#E9E9E9"/>
             </Grid>
