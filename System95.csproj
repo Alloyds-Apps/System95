@@ -25,7 +25,7 @@
     <None Remove="Assets\Icons\soundicon.off.png" />
     <None Remove="Assets\Icons\soundicon.png" />
     <None Remove="Assets\Icons\starticon_6.png" />
-    <None Remove="Assets\Images\mask_alpha.png" />
+    <None Remove="Assets\Images\grid.png" />
     <None Remove="GameUI.xaml" />
     <None Remove="JustForTesting\Pages\PleaseWaitRestart.xaml" />
     <None Remove="JustForTesting\Pages\PleaseWaitShutDown.xaml" />

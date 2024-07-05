@@ -17,18 +17,41 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System95.JustForTesting.Pages;
 using System.Threading.Tasks;
+using Microsoft.Graphics.Canvas.Brushes;
+using Microsoft.Graphics.Canvas.UI.Xaml;
+using Microsoft.Graphics.Canvas.UI;
+using Microsoft.Graphics.Canvas;
 
 namespace System95.JustForTesting
 {
     public sealed partial class System95OS : Page
     {
-        public bool IsSingleTap;
-        public static System95OS Current;
+        private CanvasBitmap backgroundImage;
+        private CanvasImageBrush backgroundBrush;
         private bool isPressed = true;
         public System95OS()
         {
             this.InitializeComponent();
-            Current = this;
+        }
+        private void BackgroundCanvas_CreateResources(CanvasControl sender, CanvasCreateResourcesEventArgs args)
+        {
+            args.TrackAsyncAction(Task.Run(async () =>
+            {
+                string uri = "ms-appx:///Assets/Images/grid.png";
+
+                backgroundImage = await CanvasBitmap.LoadAsync(sender, new Uri(uri));
+                backgroundBrush = new CanvasImageBrush(sender, backgroundImage);
+
+                // Set the brush's edge behaviour to wrap, so the image repeats if the drawn region is too big
+                backgroundBrush.ExtendX = backgroundBrush.ExtendY = CanvasEdgeBehavior.Wrap;
+                backgroundBrush.Transform = System.Numerics.Matrix3x2.CreateScale(0.4f);
+            }).AsAsyncAction());
+        }
+
+        private void BackgroundCanvas_Draw(CanvasControl sender, CanvasDrawEventArgs args)
+        {
+            var session = args.DrawingSession;
+            session.FillRectangle(new Rect(new Point(), sender.RenderSize), backgroundBrush);
         }
         private void StartButton_Checked(object sender, RoutedEventArgs e)
         {
