@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-namespace System95.JustForTesting.Pages
+namespace System95.OperatingSystems.System95.System95Resources.Pages
 {
     public sealed partial class SafeToTurnOff : Page
     {

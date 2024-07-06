@@ -1,8 +1,8 @@
 <Page
-    x:Class="System95.JustForTesting.System95OS"
+    x:Class="System95.OperatingSystems.System95.System95OS"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:System95.JustForTesting"
+    xmlns:local="using:System95.OperatingSystems.System95"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:win2d="using:Microsoft.Graphics.Canvas.UI.Xaml"
@@ -13,12 +13,12 @@
     <Grid x:Name="RootGrid">
         <Grid x:Name="ShutDownWindow" Canvas.ZIndex="1" Visibility="Collapsed" Background="Transparent">
             <win2d:CanvasControl CreateResources="BackgroundCanvas_CreateResources" Draw="BackgroundCanvas_Draw" />
-            <Grid x:Name="WindowItself" Width="338" Height="240">
-                <Border x:Name="WindowBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White"/>
-                <Grid x:Name="WindowGrid" Background="#C0C0C0" VerticalAlignment="Stretch" Margin="2,2,1,1" HorizontalAlignment="Stretch">
-                    <Grid x:Name="WindowTitleBar" Background="#000080" Height="29" Width="332" Margin="0,1,2,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <Grid x:Name="ShutDownWindowItself" Width="338" Height="240">
+                <Border x:Name="ShutDownWindowBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White"/>
+                <Grid x:Name="ShutDownWindowGrid" Background="#C0C0C0" VerticalAlignment="Stretch" Margin="2,2,1,1" HorizontalAlignment="Stretch">
+                    <Grid x:Name="ShutDownWindowTitleBar" Background="#000080" Height="29" Width="332" Margin="0,1,2,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
                         <TextBlock Text="Restart/Shutdown" HorizontalAlignment="Left" FontWeight="Black" Margin="5,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel"/>
-                        <Button x:Name="CloseWindow" IsTabStop="False" UseSystemFocusVisuals="False" Height="21" Width="25" Margin="0,5,4,3" HorizontalAlignment="Right" Click="CloseWindow_Click">
+                        <Button x:Name="CloseShutDownWindow" IsTabStop="False" UseSystemFocusVisuals="False" Height="21" Width="25" Margin="0,5,4,3" HorizontalAlignment="Right" Click="CloseShutDownWindow_Click">
                             <Button.Resources>
                                 <ResourceDictionary>
                                     <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
@@ -88,7 +88,7 @@
                         </Button>
                     </Grid>
                     <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
-                        <Image Margin="0,0,0,33" Width="56" Height="56" Source="ms-appx:///Assets/Icons/starticon_6.png"/>
+                        <Image Margin="0,0,0,33" Width="56" Height="56" Source="ms-appx:///OperatingSystems/System95/System95Resources/Icons/starticon_6.png"/>
                         <Button x:Name="RestartButton" Click="RestartButton_Click" Width="140" Height="33" Margin="0,0,0,26" VerticalAlignment="Bottom" HorizontalAlignment="Center">
                             <Button.Resources>
                                 <ResourceDictionary>
@@ -227,7 +227,91 @@
                         </Button>
                     </StackPanel>
                 </Grid>
-                <Border x:Name="WindowBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black"/>
+                <Border x:Name="ShutDownWindowBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="SettingsWindow" Canvas.ZIndex="1" Visibility="Collapsed" Background="Transparent">
+            <win2d:CanvasControl CreateResources="BackgroundCanvas_CreateResources" Draw="BackgroundCanvas_Draw" />
+            <Grid x:Name="SettingsWindowItself" Width="436" Height="436">
+                <Border x:Name="SettingsWindowBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White"/>
+                <Grid x:Name="SettingsWindowGrid" Background="#C0C0C0" VerticalAlignment="Stretch" Margin="2,2,1,1" HorizontalAlignment="Stretch">
+                    <Grid x:Name="SettingsWindowTitleBar" Background="#000080" Height="29" Width="430" Margin="0,1,2,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="25" Height="25" Source="ms-appx:///OperatingSystems/System95/System95Resources/Icons/ico_settings.png"/>
+                            <TextBlock Text="Settings" FontWeight="Black" Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel"/>
+                        </StackPanel>
+                        <Button x:Name="CloseSettingsWindow" IsTabStop="False" UseSystemFocusVisuals="False" Height="21" Width="25" Margin="0,5,4,3" HorizontalAlignment="Right" Click="CloseSettingsWindow_Click">
+                            <Button.Resources>
+                                <ResourceDictionary>
+                                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackground" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonForeground" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#C0C0C0"/>
+                                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="Black"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                                </ResourceDictionary>
+                            </Button.Resources>
+                            <FontIcon FontFamily="ms-appx:///Assets/Fonts/marlett.tff#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                                                    <Border x:Name="BorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black">
+                                                        <Border x:Name="BorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White">
+                                                            <ContentPresenter/>
+                                                        </Border>
+                                                    </Border>
+                                                    <VisualStateManager.VisualStateGroups>
+                                                        <VisualStateGroup x:Name="CommonStates">
+                                                            <VisualState x:Name="Normal">
+                                                                <Storyboard>
+                                                                    <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="PointerOver">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                     Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                     Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                            <VisualState x:Name="Pressed">
+                                                                <Storyboard>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderLeftAndTop"
+                                     Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderRightAndBottom"
+                                     Storyboard.TargetProperty="BorderBrush">
+                                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                    </ObjectAnimationUsingKeyFrames>
+                                                                </Storyboard>
+                                                            </VisualState>
+                                                        </VisualStateGroup>
+                                                    </VisualStateManager.VisualStateGroups>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+                </Grid>
+                <TextBlock Text="&quot;Settings&quot; are in development!" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Foreground="Black" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Border x:Name="SettingsWindowBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="Black"/>
             </Grid>
         </Grid>
         <Grid x:Name="Desktop" Background="#017777" Margin="0,0,0,43">
@@ -411,7 +495,7 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button x:Name="Settings" CornerRadius="0" IsTabStop="False" UseSystemFocusVisuals="False" HorizontalContentAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Height="42" Width="199">
+                <Button x:Name="Settings" CornerRadius="0" IsTabStop="False" Click="Settings_Click" UseSystemFocusVisuals="False" HorizontalContentAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Height="42" Width="199">
                     <Button.Resources>
                         <ResourceDictionary>
                             <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
@@ -862,7 +946,7 @@
                         <TextBlock Text="EN" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="-6,0,-6,0"/>
                     </Button>
                     <Button x:Name="SoundToggle" Background="Transparent" BorderBrush="Transparent" IsTabStop="False" UseSystemFocusVisuals="False" Height="35" Width="35">
-                        <Image Source="ms-appx:///Assets/Icons/soundicon.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" Margin="-7,-5,-13,-2"/>
+                        <Image Source="ms-appx:///OperatingSystems/System95/System95Resources/Icons/soundicon.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" Margin="-7,-5,-13,-2"/>
                         <Button.Resources>
                             <ResourceDictionary>
                                 <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>

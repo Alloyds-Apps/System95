@@ -15,14 +15,14 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using System95.JustForTesting.Pages;
+using System95.OperatingSystems.System95.System95Resources.Pages;
 using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas.Brushes;
 using Microsoft.Graphics.Canvas.UI.Xaml;
 using Microsoft.Graphics.Canvas.UI;
 using Microsoft.Graphics.Canvas;
 
-namespace System95.JustForTesting
+namespace System95.OperatingSystems.System95
 {
     public sealed partial class System95OS : Page
     {
@@ -37,7 +37,7 @@ namespace System95.JustForTesting
         {
             args.TrackAsyncAction(Task.Run(async () =>
             {
-                string uri = "ms-appx:///Assets/Images/grid.png";
+                string uri = "ms-appx:///OperatingSystems/System95/System95Resources/Images/grid.png";
 
                 backgroundImage = await CanvasBitmap.LoadAsync(sender, new Uri(uri));
                 backgroundBrush = new CanvasImageBrush(sender, backgroundImage);
@@ -85,9 +85,13 @@ namespace System95.JustForTesting
             this.StartMenu.Visibility = Visibility.Collapsed;
             this.ShutDownWindow.Visibility = Visibility.Visible;
         }
-        private void CloseWindow_Click(object sender, RoutedEventArgs e)
+        private void CloseShutDownWindow_Click(object sender, RoutedEventArgs e)
         {
             this.ShutDownWindow.Visibility = Visibility.Collapsed;
+        }
+        private void CloseSettingsWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.SettingsWindow.Visibility = Visibility.Collapsed;
         }
         private void RestartButton_Click(object sender, RoutedEventArgs e)
         {
@@ -98,6 +102,13 @@ namespace System95.JustForTesting
         {
             this.ShutDownWindow.Visibility = Visibility.Collapsed;
             this.Frame.Navigate(typeof(PleaseWaitShutDown), null, new SuppressNavigationTransitionInfo());
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            this.SettingsWindow.Visibility = Visibility.Visible;
+            this.StartButton.IsChecked = false;
+            this.StartMenu.Visibility = Visibility.Collapsed;
         }
     }
 }
