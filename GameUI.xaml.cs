@@ -14,7 +14,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using System95.OperatingSystems.System95;
+using System95.JustForTesting;
 
 namespace System95
 {

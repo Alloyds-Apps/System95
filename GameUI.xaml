@@ -9,87 +9,9 @@
     Background="Transparent"
     RequestedTheme="Dark">
 
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button x:Name="StartSystem95OS" HorizontalContentAlignment="Left" Width="442" HorizontalAlignment="Center" VerticalAlignment="Center" Height="28" Click="StartSystem95OS_Click">
-            <Button.Resources>
-                <ResourceDictionary>
-                    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                    <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
-                    <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                    <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
-                    <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#646464"/>
-                    <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
-                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#646464"/>
-                </ResourceDictionary>
-            </Button.Resources>
-            <TextBlock Text="1. System95" Margin="5,0,0,0" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel"/>
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="Button">
-                                <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
-                                    <VisualStateManager.VisualStateGroups>
-                                        <VisualStateGroup x:Name="CommonStates">
-                                            <VisualState x:Name="Normal">
-                                                <Storyboard>
-                                                    <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
-                                                </Storyboard>
-                                            </VisualState>
-                                            <VisualState x:Name="PointerOver">
-                                                <Storyboard>
-                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
-                           Storyboard.TargetProperty="Background">
-                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBackgroundPointerOver}" />
-                                                    </ObjectAnimationUsingKeyFrames>
-                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
-                           Storyboard.TargetProperty="BorderBrush">
-                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderBrushPointerOver}" />
-                                                    </ObjectAnimationUsingKeyFrames>
-                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
-                           Storyboard.TargetProperty="Foreground">
-                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonForegroundPointerOver}" />
-                                                    </ObjectAnimationUsingKeyFrames>
-                                                </Storyboard>
-                                            </VisualState>
-                                            <VisualState x:Name="Pressed">
-                                                <Storyboard>
-                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
-                           Storyboard.TargetProperty="Background">
-                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBackgroundPressed}" />
-                                                    </ObjectAnimationUsingKeyFrames>
-                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid"
-                           Storyboard.TargetProperty="BorderBrush">
-                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderBrushPressed}" />
-                                                    </ObjectAnimationUsingKeyFrames>
-                                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
-                           Storyboard.TargetProperty="Foreground">
-                                                        <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonForegroundPressed}" />
-                                                    </ObjectAnimationUsingKeyFrames>
-                                                </Storyboard>
-                                            </VisualState>
-                                        </VisualStateGroup>
-                                    </VisualStateManager.VisualStateGroups>
-                                    <ContentPresenter x:Name="ContentPresenter"
-  BorderBrush="Transparent"
-  BorderThickness="{TemplateBinding BorderThickness}"
-  Content="{TemplateBinding Content}"
-  ContentTransitions="{TemplateBinding ContentTransitions}"
-  ContentTemplate="{TemplateBinding ContentTemplate}"
-  Padding="{TemplateBinding Padding}"
-  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-  AutomationProperties.AccessibilityView="Raw" />
-                                </Grid>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Style>
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Button x:Name="StartSystem95OS" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Click="StartSystem95OS_Click">
+            <TextBlock Text="System95"/>
         </Button>
     </StackPanel>
 
