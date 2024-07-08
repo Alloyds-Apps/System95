@@ -14,18 +14,23 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Playback;
 
-namespace System95.JustForTesting.Pages
+namespace System95.OperatingSystems.System95.Resources.Pages
 {
-    public sealed partial class PleaseWaitRestart : Page
+    public sealed partial class SafeToTurnOff : Page
     {
-        public PleaseWaitRestart()
+        public SafeToTurnOff()
         {
             this.InitializeComponent();
         }
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             await Task.Delay(3000);
+            this.TurnOn.Visibility = Visibility.Visible;
+        }
+        private void TurnOn_Click(object sender, RoutedEventArgs e)
+        {
             this.Frame.Navigate(typeof(GameUI), null, new SuppressNavigationTransitionInfo());
         }
     }

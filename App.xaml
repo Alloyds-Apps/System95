@@ -12,6 +12,8 @@
                 <ResourceDictionary Source="ms-appx:///Styles/MenuFlyout.xaml" />
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
+            <SolidColorBrush x:Key="WindowCaptionBackground">Transparent</SolidColorBrush>
+            <SolidColorBrush x:Key="WindowCaptionBackgroundDisabled">Transparent</SolidColorBrush>
             <!-- Other app resources here -->
         </ResourceDictionary>
     </Application.Resources>

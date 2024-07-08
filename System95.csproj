@@ -16,21 +16,44 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Assets\chicagoflf.ttf" />
-    <Content Remove="Assets\Fonts\marlett.ttf" />
     <Content Remove="Assets\progresspixel.ttf" />
     <Content Remove="C:\Users\Radist\.nuget\packages\ivirius.ui.controls\0.1.1-prerelease\contentFiles\any\net8.0-windows10.0.19041\Ivirius.png" />
     <Content Remove="C:\Users\Radist\.nuget\packages\ivirius.ui.controls\0.1.1-prerelease\contentFiles\any\net8.0-windows10.0.19041\Themes\UAC.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Assets\Icons\soundicon.off.png" />
-    <None Remove="Assets\Icons\soundicon.png" />
-    <None Remove="Assets\Icons\starticon_6.png" />
-    <None Remove="Assets\Images\grid.png" />
+    <None Remove="Assets\Sounds\click.mp3" />
+    <None Remove="GameSettings.xaml" />
+    <None Remove="OperatingSystems\System95\Resources\Fonts\chicagoflf.ttf" />
+    <None Remove="OperatingSystems\System95\Resources\Fonts\opensans.ttf" />
+    <None Remove="OperatingSystems\System95\Resources\Fonts\progresspixel.ttf" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\BeginIcon.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\binicon.full.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\binicon.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\defragmentationicon32.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\ico32_ach.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\ico32_browser.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\ico32_calendar.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\ico32_mediaplayer.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\ico_mymenu.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\ico_settings.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\pauseicon.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\soundicon.off.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\soundicon.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\starticon_1.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\starticon_2.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\starticon_3.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\starticon_4.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\starticon_5.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\starticon_6.png" />
+    <None Remove="OperatingSystems\System95\Resources\Images\grid.png" />
     <None Remove="GameUI.xaml" />
-    <None Remove="JustForTesting\Pages\PleaseWaitRestart.xaml" />
-    <None Remove="JustForTesting\Pages\PleaseWaitShutDown.xaml" />
-    <None Remove="JustForTesting\Pages\SafeToTurnOff.xaml" />
-    <None Remove="JustForTesting\System95OS.xaml" />
+    <None Remove="OperatingSystems\System95OS.xaml" />
+    <None Remove="OperatingSystems\System95\Resources\Pages\PleaseWaitRestart.xaml" />
+    <None Remove="OperatingSystems\System95\Resources\Pages\PleaseWaitShutDown.xaml" />
+    <None Remove="OperatingSystems\System95\Resources\Pages\SafeToTurnOff.xaml" />
+    <None Remove="OperatingSystems\System95\Resources\Pages\StartingSystem95.xaml" />
+    <None Remove="OperatingSystems\System95\Resources\Sounds\intro_s95.mp3" />
+    <None Remove="OperatingSystems\System95\Resources\Sounds\outro_s95.mp3" />
     <None Remove="Styles\MenuFlyout.xaml" />
   </ItemGroup>
 	
@@ -46,6 +69,31 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="OperatingSystems\System95\Resources\Fonts\chicagoflf.ttf" />
+    <Content Include="OperatingSystems\System95\Resources\Fonts\opensans.ttf" />
+    <Content Include="OperatingSystems\System95\Resources\Fonts\progresspixel.ttf" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\BeginIcon.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\binicon.full.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\binicon.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\defragmentationicon32.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\ico32_ach.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\ico32_browser.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\ico32_calendar.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\ico32_mediaplayer.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\ico_mymenu.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\ico_settings.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\pauseicon.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\soundicon.off.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\soundicon.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\starticon_1.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\starticon_2.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\starticon_3.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\starticon_4.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\starticon_5.png" />
+    <Content Include="OperatingSystems\System95\Resources\Icons\starticon_6.png" />
+    <Content Include="OperatingSystems\System95\Resources\Images\grid.png" />
+    <Content Include="OperatingSystems\System95\Resources\Sounds\intro_s95.mp3" />
+    <Content Include="OperatingSystems\System95\Resources\Sounds\outro_s95.mp3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -70,17 +118,29 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="JustForTesting\Pages\PleaseWaitRestart.xaml">
+    <Page Update="OperatingSystems\System95\Resources\Pages\StartingSystem95.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="JustForTesting\Pages\SafeToTurnOff.xaml">
+    <Page Update="GameSettings.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="GameUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="OperatingSystems\System95\Resources\Pages\PleaseWaitRestart.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="OperatingSystems\System95\Resources\Pages\PleaseWaitShutDown.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="OperatingSystems\System95\Resources\Pages\SafeToTurnOff.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -90,12 +150,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="JustForTesting\System95OS.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="JustForTesting\Pages\PleaseWaitShutDown.xaml">
+    <Page Update="OperatingSystems\System95OS.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
