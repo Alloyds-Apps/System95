@@ -38,6 +38,7 @@ namespace System95
             ExtendsContentIntoTitleBar = true;
             this.CenterOnScreen();
             SetTitleBar(AppTitleBar);
+            AppWindow.Resize(new SizeInt32(1280, 730));
 
             this.GameFrame.Navigate(typeof(GameUI), null, new SuppressNavigationTransitionInfo());
             AppWindow.TitleBar.PreferredHeightOption = Microsoft.UI.Windowing.TitleBarHeightOption.Collapsed;
