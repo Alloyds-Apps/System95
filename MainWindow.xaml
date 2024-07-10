@@ -44,13 +44,6 @@
                         Text="System95"
                         FontSize="12"
                         FontWeight="Normal"/>
-                        <TextBlock
-                        x:Name="AppSubTitle"
-                        Margin="8,0,0,0"
-                        VerticalAlignment="Center"
-                        Text="Preview"
-                        FontSize="12"
-                        FontWeight="Normal" Foreground="Gray"/>
                     </StackPanel>
                 </Border>
             </StackPanel>

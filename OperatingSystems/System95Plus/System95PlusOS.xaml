@@ -1172,8 +1172,17 @@ AutomationProperties.AccessibilityView="Raw" />
             </StackPanel>
             <StackPanel x:Name="Logo" Width="644" Height="239" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                 <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-                    <TextBlock Text="System95"  FontSize="40" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
-                    <TextBlock Text="+ Plus!" HorizontalAlignment="Right" FontSize="40" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="System" FontSize="60" FontWeight="Bold" Foreground="White" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                        <TextBlock Text="95" FontSize="60" Foreground="White" Margin="8,0,0,0" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="+" HorizontalAlignment="Right" FontWeight="Black" FontSize="60" Foreground="#FFE600" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                        <TextBlock Text="P" HorizontalAlignment="Right" FontWeight="Black" FontSize="60" Foreground="#F7931E" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                        <TextBlock Text="L" HorizontalAlignment="Right" FontWeight="Black" FontSize="60" Foreground="#C1272D" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                        <TextBlock Text="U" HorizontalAlignment="Right" FontWeight="Black" FontSize="60" Foreground="#29ABE2" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                        <TextBlock Text="S" HorizontalAlignment="Right" FontWeight="Black" FontSize="60" Foreground="#8CC63F" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel"/>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </Grid>
@@ -1186,6 +1195,10 @@ AutomationProperties.AccessibilityView="Raw" />
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="System" VerticalAlignment="Center" FontWeight="Bold" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.tff#progresspixel" Margin="8,0,0,0" FontSize="22"/>
                     <TextBlock Text="95" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.tff#progresspixel" Margin="4,0,0,0" FontSize="22"/>
+                    <TextBlock Text="P" VerticalAlignment="Center" FontWeight="Bold" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.tff#progresspixel" Foreground="#DE841B" Margin="6,0,0,0" FontSize="22"/>
+                    <TextBlock Text="l" VerticalAlignment="Center" FontWeight="Bold" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.tff#progresspixel" Foreground="#D51920" Margin="0,0,0,0" FontSize="22"/>
+                    <TextBlock Text="u" VerticalAlignment="Center" FontWeight="Bold" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.tff#progresspixel" Foreground="#259ACB" Margin="0,0,0,0" FontSize="22"/>
+                    <TextBlock Text="s" VerticalAlignment="Center" FontWeight="Bold" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.tff#progresspixel" Foreground="#33A342" Margin="0,0,0,0" FontSize="22"/>
                 </StackPanel>
             </Grid>
             <StackPanel x:Name="Options" Margin="44,3,0,4">
