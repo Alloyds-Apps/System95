@@ -17,11 +17,11 @@
     </Window.SystemBackdrop>
     
     <Grid>
-        <Grid x:Name="AppTitleBar" Background="Transparent" Height="32" VerticalAlignment="Top" Margin="0,0,138,0">
+        <Grid x:Name="AppTitleBar" Canvas.ZIndex="1" Background="Transparent" Height="32" VerticalAlignment="Top" Margin="0,0,138,0">
             <StackPanel x:Name="TitleBar" Orientation="Horizontal" Background="Transparent">
                 <Border             
                 Height="32"
-                Margin="12,0,0,0"
+                Margin="5,0,0,0"
                 VerticalAlignment="Top"
                 Background="Transparent"
                 Canvas.ZIndex="1"
@@ -39,14 +39,14 @@
                         Source="ms-appx:///Assets/Square44x44Logo.png" />
                         <TextBlock
                         x:Name="AppTitle"
-                        Margin="12,0,4,0"
+                        Margin="8,0,0,0"
                         VerticalAlignment="Center"
                         Text="System95"
                         FontSize="12"
                         FontWeight="Normal"/>
                         <TextBlock
                         x:Name="AppSubTitle"
-                        Margin="5,0,4,0"
+                        Margin="8,0,0,0"
                         VerticalAlignment="Center"
                         Text="Preview"
                         FontSize="12"
@@ -424,6 +424,6 @@
                 </Button.Style>
             </Button>
         </StackPanel>
-        <Frame x:Name="GameFrame" RequestedTheme="Dark" Background="Black" Margin="0,32,0,0"/>
+        <Frame x:Name="GameFrame" Canvas.ZIndex="0" RequestedTheme="Dark" Background="Black" Margin="0,32,0,0"/>
     </Grid>
 </winex:WindowEx>

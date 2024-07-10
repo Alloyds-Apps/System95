@@ -15,7 +15,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using System95.OperatingSystems.System95.Resources.Pages;
+using System95.OperatingSystems.System95Plus.Resources.Pages;
 using System.Threading.Tasks;
 using Microsoft.Graphics.Canvas.Brushes;
 using Microsoft.Graphics.Canvas.UI.Xaml;
@@ -28,9 +28,9 @@ using Microsoft.UI.Input;
 using System.Reflection;
 using Windows.ApplicationModel.DataTransfer;
 
-namespace System95.OperatingSystems.System95
+namespace System95.OperatingSystems.System95Plus
 {
-    public sealed partial class System95OS : Page
+    public sealed partial class System95PlusOS : Page
     {
         private Point MouseDownLocation;
         MediaPlayer introPlay = new MediaPlayer();
@@ -38,7 +38,7 @@ namespace System95.OperatingSystems.System95
         MediaPlayer clickPlay = new MediaPlayer();
         private CanvasBitmap backgroundImage;
         private CanvasImageBrush backgroundBrush;
-        public System95OS()
+        public System95PlusOS()
         {
             this.InitializeComponent();
         }
@@ -46,7 +46,7 @@ namespace System95.OperatingSystems.System95
         {
             args.TrackAsyncAction(Task.Run(async () =>
             {
-                string uri = "ms-appx:///OperatingSystems/System95/Resources/Images/grid.png";
+                string uri = "ms-appx:///OperatingSystems/System95Plus/Resources/Images/grid.png";
 
                 backgroundImage = await CanvasBitmap.LoadAsync(sender, new Uri(uri));
                 backgroundBrush = new CanvasImageBrush(sender, backgroundImage);
@@ -93,7 +93,7 @@ namespace System95.OperatingSystems.System95
             clickPlay.Play();
 
             introPlay.Dispose();
-            outroPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95/Resources/Sounds/outro_s95.mp3"));
+            outroPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95Plus/Resources/Sounds/outro_s95plus.mp3"));
             outroPlay.Play();
         }
         private void ShutDownButton_Click(object sender, RoutedEventArgs e)
@@ -105,13 +105,13 @@ namespace System95.OperatingSystems.System95
             clickPlay.Play();
 
             introPlay.Dispose();
-            outroPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95/Resources/Sounds/outro_s95.mp3"));
+            outroPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95Plus/Resources/Sounds/outro_s95plus.mp3"));
             outroPlay.Play();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            introPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95/Resources/Sounds/intro_s95.mp3"));
+            introPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95Plus/Resources/Sounds/intro_s95plus.mp3"));
             introPlay.Play();
         }
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -126,6 +126,11 @@ namespace System95.OperatingSystems.System95
             clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
             clickPlay.Play();
         }
+        private void Mailbox_Click(object sender, RoutedEventArgs e)
+        {
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
+        }
         private void Calendar_Click(object sender, RoutedEventArgs e)
         {
             clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
@@ -136,7 +141,7 @@ namespace System95.OperatingSystems.System95
             clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
             clickPlay.Play();
         }
-        private void SystemNet_Click(object sender, RoutedEventArgs e)
+        private void SystemBrowser_Click(object sender, RoutedEventArgs e)
         {
             clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
             clickPlay.Play();
@@ -193,6 +198,11 @@ namespace System95.OperatingSystems.System95
             clickPlay.Play();
         }
         private void Defragmentation_Click(object sender, RoutedEventArgs e)
+        {
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
+        }
+        private void Firewall_Click(object sender, RoutedEventArgs e)
         {
             clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
             clickPlay.Play();

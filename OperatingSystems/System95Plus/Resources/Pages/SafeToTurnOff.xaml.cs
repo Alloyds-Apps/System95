@@ -18,7 +18,7 @@ using Windows.Foundation.Collections;
 using Windows.Media.Core;
 using Windows.Media.Playback;
 
-namespace System95.OperatingSystems.System95.Resources.Pages
+namespace System95.OperatingSystems.System95Plus.Resources.Pages
 {
     public sealed partial class SafeToTurnOff : Page
     {

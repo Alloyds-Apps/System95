@@ -5,11 +5,11 @@ using Microsoft.UI.Xaml.Media.Animation;
 using System;
 using System.Threading.Tasks;
 
-namespace System95.OperatingSystems.System95.Resources.Pages
+namespace System95.OperatingSystems.System95Plus.Resources.Pages
 {
-    public sealed partial class PleaseWaitShutDown : Page
+    public sealed partial class PleaseWaitRestart : Page
     {
-        public PleaseWaitShutDown()
+        public PleaseWaitRestart()
         {
             this.InitializeComponent();
         }
@@ -18,9 +18,8 @@ namespace System95.OperatingSystems.System95.Resources.Pages
             this.ProtectedCursor = InputSystemCursor.Create(InputSystemCursorShape.Wait);
             await Task.Delay(1500);
             this.ProtectedCursor = InputSystemCursor.Create(InputSystemCursorShape.Arrow);
-
-            await Task.Delay(3500);
-            this.Frame.Navigate(typeof(SafeToTurnOff), null, new SuppressNavigationTransitionInfo());
+            await Task.Delay(3000);
+            this.Frame.Navigate(typeof(GameUI), null, new SuppressNavigationTransitionInfo());
         }
     }
 }

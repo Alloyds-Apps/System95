@@ -5,17 +5,16 @@
     xmlns:local="using:System95.OperatingSystems.System95.Resources.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="#3B72C2"
+    mc:Ignorable="d"    
     Loaded="Page_Loaded">
 
-    <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Please wait" FontSize="80" FontFamily="ms-appx:///Assets/Fonts/chicagoflf.tff#ChicagoFLF"/>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,90,0,0">
+    <Grid x:Name="RootGrid" Background="#3B72C2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100,0,0">
+            <TextBlock Text="Please wait" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="ms-appx:///Assets/Fonts/chicagoflf.tff#ChicagoFLF"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,300,0,0">
                 <TextBlock Text="System" FontSize="60" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel"/>
                 <TextBlock Text="95" FontSize="60" FontWeight="Bold" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="6,0,0,0"/>
             </StackPanel>
-        </StackPanel>
+        </Grid>
     </Grid>
 </Page>

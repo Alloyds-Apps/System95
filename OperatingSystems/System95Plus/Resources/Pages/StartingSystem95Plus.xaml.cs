@@ -15,11 +15,11 @@ using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Media.Animation;
 using System.Threading.Tasks;
 
-namespace System95.OperatingSystems.System95.Resources.Pages
+namespace System95.OperatingSystems.System95Plus.Resources.Pages
 {
-    public sealed partial class StartingSystem95 : Page
+    public sealed partial class StartingSystem95Plus : Page
     {
-        public StartingSystem95()
+        public StartingSystem95Plus()
         {
             this.InitializeComponent();
         }

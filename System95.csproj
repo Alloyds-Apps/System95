@@ -22,10 +22,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Sounds\click.mp3" />
+    <None Remove="Assets\Sounds\fanshutdown.mp3" />
     <None Remove="GameSettings.xaml" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Fonts\chicagoflf.ttf" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Fonts\marlett.ttf" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Fonts\opensans.ttf" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Fonts\progresspixel.ttf" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Fonts\selawk.ttf" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\BeginIcon.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\binicon.full.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\binicon.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\defragmentationicon32.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_ach.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_browser.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_calendar.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_firewall.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_mediaplayer.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico_mymenu.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico_settings.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\pauseicon.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\soundicon.off.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\soundicon.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\starticon_1.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\starticon_2.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\starticon_3.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\starticon_4.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\starticon_5.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\starticon_6.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Images\grid.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Sounds\intro_s95plus.mp3" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Sounds\outro_s95plus.mp3" />
     <None Remove="OperatingSystems\System95\Resources\Fonts\chicagoflf.ttf" />
     <None Remove="OperatingSystems\System95\Resources\Fonts\opensans.ttf" />
     <None Remove="OperatingSystems\System95\Resources\Fonts\progresspixel.ttf" />
+    <None Remove="OperatingSystems\System95\Resources\Fonts\selawk.ttf" />
     <None Remove="OperatingSystems\System95\Resources\Icons\BeginIcon.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\binicon.full.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\binicon.png" />
@@ -33,6 +63,7 @@
     <None Remove="OperatingSystems\System95\Resources\Icons\ico32_ach.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\ico32_browser.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\ico32_calendar.png" />
+    <None Remove="OperatingSystems\System95\Resources\Icons\ico32_mail.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\ico32_mediaplayer.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\ico_mymenu.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\ico_settings.png" />
@@ -48,6 +79,7 @@
     <None Remove="OperatingSystems\System95\Resources\Images\grid.png" />
     <None Remove="GameUI.xaml" />
     <None Remove="OperatingSystems\System95OS.xaml" />
+    <None Remove="OperatingSystems\System95\Resources\Pages\BootScreen.xaml" />
     <None Remove="OperatingSystems\System95\Resources\Pages\PleaseWaitRestart.xaml" />
     <None Remove="OperatingSystems\System95\Resources\Pages\PleaseWaitShutDown.xaml" />
     <None Remove="OperatingSystems\System95\Resources\Pages\SafeToTurnOff.xaml" />
@@ -68,9 +100,38 @@
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Fonts\chicagoflf.ttf" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Fonts\marlett.ttf" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Fonts\opensans.ttf" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Fonts\progresspixel.ttf" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Fonts\selawk.ttf" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\BeginIcon.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\binicon.full.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\binicon.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\defragmentationicon32.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_ach.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_browser.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_calendar.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_firewall.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_mediaplayer.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico_mymenu.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico_settings.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\pauseicon.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\soundicon.off.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\soundicon.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\starticon_1.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\starticon_2.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\starticon_3.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\starticon_4.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\starticon_5.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\starticon_6.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Images\grid.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Sounds\intro_s95plus.mp3" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Sounds\outro_s95plus.mp3" />
     <Content Include="OperatingSystems\System95\Resources\Fonts\chicagoflf.ttf" />
     <Content Include="OperatingSystems\System95\Resources\Fonts\opensans.ttf" />
     <Content Include="OperatingSystems\System95\Resources\Fonts\progresspixel.ttf" />
+    <Content Include="OperatingSystems\System95\Resources\Fonts\selawk.ttf" />
     <Content Include="OperatingSystems\System95\Resources\Icons\BeginIcon.png" />
     <Content Include="OperatingSystems\System95\Resources\Icons\binicon.full.png" />
     <Content Include="OperatingSystems\System95\Resources\Icons\binicon.png" />
@@ -78,6 +139,7 @@
     <Content Include="OperatingSystems\System95\Resources\Icons\ico32_ach.png" />
     <Content Include="OperatingSystems\System95\Resources\Icons\ico32_browser.png" />
     <Content Include="OperatingSystems\System95\Resources\Icons\ico32_calendar.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_mail.png" />
     <Content Include="OperatingSystems\System95\Resources\Icons\ico32_mediaplayer.png" />
     <Content Include="OperatingSystems\System95\Resources\Icons\ico_mymenu.png" />
     <Content Include="OperatingSystems\System95\Resources\Icons\ico_settings.png" />
@@ -115,6 +177,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="OperatingSystems\System95\Resources\Pages\BootScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="OperatingSystems\System95\Resources\Pages\StartingSystem95.xaml">

@@ -5,7 +5,7 @@ using Microsoft.UI.Xaml.Media.Animation;
 using System;
 using System.Threading.Tasks;
 
-namespace System95.OperatingSystems.System95.Resources.Pages
+namespace System95.OperatingSystems.System95Plus.Resources.Pages
 {
     public sealed partial class PleaseWaitShutDown : Page
     {

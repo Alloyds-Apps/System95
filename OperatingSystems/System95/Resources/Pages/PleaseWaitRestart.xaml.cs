@@ -1,21 +1,9 @@
+using Microsoft.UI.Input;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
-using Microsoft.UI.Xaml.Navigation;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.Media.Core;
-using Windows.Media.Playback;
 
 namespace System95.OperatingSystems.System95.Resources.Pages
 {
@@ -27,6 +15,9 @@ namespace System95.OperatingSystems.System95.Resources.Pages
         }
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            this.ProtectedCursor = InputSystemCursor.Create(InputSystemCursorShape.Wait);
+            await Task.Delay(1500);
+            this.ProtectedCursor = InputSystemCursor.Create(InputSystemCursorShape.Arrow);
             await Task.Delay(3000);
             this.Frame.Navigate(typeof(GameUI), null, new SuppressNavigationTransitionInfo());
         }

@@ -15,6 +15,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using System95.OperatingSystems.System95.Resources.Pages;
+using System95.OperatingSystems.System95Plus.Resources.Pages;
 
 namespace System95
 {
@@ -27,6 +28,10 @@ namespace System95
         private void StartSystem95OS_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(StartingSystem95), null, new SuppressNavigationTransitionInfo());
+        }
+        private void StartSystem95PlusOS_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(StartingSystem95Plus), null, new SuppressNavigationTransitionInfo());
         }
     }
 }
