@@ -18,7 +18,7 @@
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="System" FontSize="60" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel"/>
             <TextBlock Text="95" FontSize="60" FontWeight="Bold" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="6,0,0,0"/>
-            <TextBlock Text="+Plus!" FontSize="60" FontWeight="Bold" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="30,0,0,0"/>
+            <TextBlock Text="+ Plus!" FontSize="60" FontWeight="Bold" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="30,0,0,0"/>
         </StackPanel>
     </Grid>
 </Page>
