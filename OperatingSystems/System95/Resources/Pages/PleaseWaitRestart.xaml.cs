@@ -19,7 +19,7 @@ namespace System95.OperatingSystems.System95.Resources.Pages
             await Task.Delay(1500);
             this.ProtectedCursor = InputSystemCursor.Create(InputSystemCursorShape.Arrow);
             await Task.Delay(3000);
-            this.Frame.Navigate(typeof(GameUI), null, new SuppressNavigationTransitionInfo());
+            this.Frame.Navigate(typeof(OSSelect), null, new SuppressNavigationTransitionInfo());
         }
     }
 }

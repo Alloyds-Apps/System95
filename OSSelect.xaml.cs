@@ -19,9 +19,9 @@ using System95.OperatingSystems.System95Plus.Resources.Pages;
 
 namespace System95
 {
-    public sealed partial class GameUI : Page
+    public sealed partial class OSSelect : Page
     {
-        public GameUI()
+        public OSSelect()
         {
             this.InitializeComponent();
         }

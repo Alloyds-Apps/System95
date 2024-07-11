@@ -9,29 +9,27 @@
     Background="Black"
     Loaded="Page_Loaded">
 
-    <Grid>
-        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,200,0,0">
-                <TextBlock Text="It's now safe to turn off the game" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/selawk.ttf#Selawk" Foreground="#F55C25" FontSize="60" TextAlignment="Center" TextWrapping="Wrap" Width="620"/>
-                <Button x:Name="TurnOn" Visibility="Collapsed" IsTabStop="False" UseSystemFocusVisuals="False" CornerRadius="0" Padding="0" Click="TurnOn_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,100,0,0">
-                    <Button.Resources>
-                        <ResourceDictionary>
-                            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
-                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
-                        </ResourceDictionary>
-                    </Button.Resources>
-                    <TextBlock Text="Turn On" FontSize="18" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel"/>
-                </Button>
-            </StackPanel>
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="It's now safe to turn off the game" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/selawk.ttf#Selawk" Foreground="#F55C25" FontSize="60" TextAlignment="Center" TextWrapping="Wrap" Width="620"/>
+            <Button x:Name="TurnOn" Visibility="Collapsed" IsTabStop="False" UseSystemFocusVisuals="False" CornerRadius="0" Padding="0" Click="TurnOn_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,100,0,0">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent"/>
+                        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                        <SolidColorBrush x:Key="ButtonBorderBrushDisabled" Color="Transparent"/>
+                        <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+                        <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
+                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
+                    </ResourceDictionary>
+                </Button.Resources>
+                <TextBlock Text="Turn On" FontSize="18" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel"/>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

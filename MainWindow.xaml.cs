@@ -23,6 +23,9 @@ using System95.Helpers;
 using Microsoft.UI.Content;
 using Windows.Graphics;
 using System.ComponentModel;
+using Size = System.Drawing.Size;
+using Microsoft.UI.Windowing;
+using Microsoft.UI;
 
 namespace System95
 {
@@ -31,16 +34,18 @@ namespace System95
         private readonly ContentCoordinateConverter contentCoordinateConverter;
         private readonly SUBCLASSPROC mainWindowSubClassProc;
         private readonly SUBCLASSPROC inputNonClientPointerSourceSubClassProc;
+
         private WindowMessageMonitor _msgMonitor;
         public MainWindow()
         {
             this.InitializeComponent();
             ExtendsContentIntoTitleBar = true;
             this.CenterOnScreen();
+            this.AppWindow.SetIcon("Assets/icon.ico");
             SetTitleBar(AppTitleBar);
             AppWindow.Resize(new SizeInt32(1280, 730));
 
-            this.GameFrame.Navigate(typeof(GameUI), null, new SuppressNavigationTransitionInfo());
+            this.GameFrame.Navigate(typeof(OSSelect), null, new SuppressNavigationTransitionInfo());
             AppWindow.TitleBar.PreferredHeightOption = Microsoft.UI.Windowing.TitleBarHeightOption.Collapsed;
 
             _msgMonitor = new WindowMessageMonitor(this);
@@ -129,9 +134,9 @@ namespace System95
         {
             this.Minimize();
         }
-        private void WindowEx_Closed(object sender, WindowEventArgs args)
+        private void CloseGame_Click(object sender, RoutedEventArgs e)
         {
-            args.Handled = true;
+            this.Close();
         }
     }
 }

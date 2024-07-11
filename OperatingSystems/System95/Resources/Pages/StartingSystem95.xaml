@@ -9,6 +9,6 @@
     Loaded="Page_Loaded">
 
     <Grid>
-        <TextBlock Text="Starting System95" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Margin="405,252,0,0"/>
+        <TextBlock Text="Starting System 95" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Margin="405,252,0,0"/>
     </Grid>
 </Page>

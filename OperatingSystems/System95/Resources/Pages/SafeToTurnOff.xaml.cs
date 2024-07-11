@@ -34,7 +34,7 @@ namespace System95.OperatingSystems.System95.Resources.Pages
         }
         private void TurnOn_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(GameUI), null, new SuppressNavigationTransitionInfo());
+            this.Frame.Navigate(typeof(OSSelect), null, new SuppressNavigationTransitionInfo());
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {

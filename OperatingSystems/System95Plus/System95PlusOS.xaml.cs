@@ -38,9 +38,14 @@ namespace System95.OperatingSystems.System95Plus
         MediaPlayer clickPlay = new MediaPlayer();
         private CanvasBitmap backgroundImage;
         private CanvasImageBrush backgroundBrush;
+
+        public static RadioButton ChoiceRestart { get; set; }
+        public static RadioButton ChoiceShutdown { get; set; }
         public System95PlusOS()
         {
             this.InitializeComponent();
+            ChoiceRestart = RestartOS;
+            ChoiceShutdown = ShutdownOS;
         }
         private void BackgroundCanvas_CreateResources(CanvasControl sender, CanvasCreateResourcesEventArgs args)
         {
@@ -118,8 +123,7 @@ namespace System95.OperatingSystems.System95Plus
         {
             base.OnNavigatedFrom(e);
 
-            ShutDownButton.Click += ShutDownButton_Click;
-            RestartButton.Click += RestartButton_Click;
+            OKButton.Click += OKButton_Click;
         }
         private void BeginButton_Click(object sender, RoutedEventArgs e)
         {
@@ -256,6 +260,41 @@ namespace System95.OperatingSystems.System95Plus
             this.ProtectedCursor = InputSystemCursor.Create(InputSystemCursorShape.Wait);
             await Task.Delay(2500);
             this.ProtectedCursor = InputSystemCursor.Create(InputSystemCursorShape.Arrow);
+        }
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
+            if (this.PowerChoices.SelectedIndex == 0)
+            {
+                introPlay.Dispose();
+                this.Frame.Navigate(typeof(PleaseWaitRestart), null, new SuppressNavigationTransitionInfo());
+                outroPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95Plus/Resources/Sounds/outro_s95plus.mp3"));
+                outroPlay.Play();
+            }
+            if (this.PowerChoices.SelectedIndex == 1)
+            {
+                introPlay.Dispose();
+                this.Frame.Navigate(typeof(PleaseWaitShutDown), null, new SuppressNavigationTransitionInfo());
+                outroPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///OperatingSystems/System95Plus/Resources/Sounds/outro_s95plus.mp3"));
+                outroPlay.Play();
+            }
+        }
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
+            this.ShutDownWindow.Visibility = Visibility.Collapsed;
+        }
+        private void ShutdownOS_Click(object sender, RoutedEventArgs e)
+        {
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
+        }
+        private void RestartOS_Click(object sender, RoutedEventArgs e)
+        {
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
         }
     }
 }

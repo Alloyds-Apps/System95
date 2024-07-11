@@ -33,6 +33,7 @@
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\binicon.full.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\binicon.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\defragmentationicon32.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\DifficultyLevelIcon.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_ach.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_browser.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_calendar.png" />
@@ -77,7 +78,6 @@
     <None Remove="OperatingSystems\System95\Resources\Icons\starticon_5.png" />
     <None Remove="OperatingSystems\System95\Resources\Icons\starticon_6.png" />
     <None Remove="OperatingSystems\System95\Resources\Images\grid.png" />
-    <None Remove="GameUI.xaml" />
     <None Remove="OperatingSystems\System95OS.xaml" />
     <None Remove="OperatingSystems\System95\Resources\Pages\BootScreen.xaml" />
     <None Remove="OperatingSystems\System95\Resources\Pages\PleaseWaitRestart.xaml" />
@@ -86,6 +86,7 @@
     <None Remove="OperatingSystems\System95\Resources\Pages\StartingSystem95.xaml" />
     <None Remove="OperatingSystems\System95\Resources\Sounds\intro_s95.mp3" />
     <None Remove="OperatingSystems\System95\Resources\Sounds\outro_s95.mp3" />
+    <None Remove="OSSelect.xaml" />
     <None Remove="Styles\MenuFlyout.xaml" />
   </ItemGroup>
 	
@@ -109,6 +110,7 @@
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\binicon.full.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\binicon.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\defragmentationicon32.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\DifficultyLevelIcon.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_ach.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_browser.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_calendar.png" />
@@ -161,7 +163,7 @@
     <PackageReference Include="CommunityToolkit.WinUI.Animations" Version="8.0.240109" />
     <PackageReference Include="Ivirius.UI.Controls" Version="0.1.1-prerelease" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1" />
-    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240607001" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240627000" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="WinUICommunity.Components" Version="6.9.0" />
     <PackageReference Include="WinUICommunity.Core" Version="6.9.0" />
@@ -179,6 +181,11 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="GameSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="OperatingSystems\System95\Resources\Pages\BootScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,7 +201,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="GameUI.xaml">
+    <Page Update="OSSelect.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="OperatingSystems\System95\Resources\Pages\PleaseWaitRestart.xaml">

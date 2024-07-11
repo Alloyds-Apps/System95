@@ -9,12 +9,12 @@
     Loaded="Page_Loaded">
 
     <Grid x:Name="RootGrid" Background="#3B72C2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,100,0,0">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Please wait" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="ms-appx:///Assets/Fonts/chicagoflf.tff#ChicagoFLF"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,300,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,60,0,0">
                 <TextBlock Text="System" FontSize="60" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel"/>
                 <TextBlock Text="95" FontSize="60" FontWeight="Bold" FontFamily="ms-appx:///Assets/Fonts/progresspixel.tff#progresspixel" Margin="6,0,0,0"/>
             </StackPanel>
-        </Grid>
+        </StackPanel>
     </Grid>
 </Page>
