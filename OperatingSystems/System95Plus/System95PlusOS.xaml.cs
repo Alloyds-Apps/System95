@@ -160,6 +160,9 @@ namespace System95.OperatingSystems.System95Plus
         }
         private void LoadSave_Click(object sender, RoutedEventArgs e)
         {
+            this.BeginButton.IsChecked = false;
+            this.BeginMenu.Visibility = Visibility.Collapsed;
+            this.GameModesAndChallengesWindow.Visibility = Visibility.Visible;
             clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
             clickPlay.Play();
         }
@@ -292,6 +295,17 @@ namespace System95.OperatingSystems.System95Plus
             clickPlay.Play();
         }
         private void RestartOS_Click(object sender, RoutedEventArgs e)
+        {
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
+        }
+        private void CloseGameModesAndChallengesWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.GameModesAndChallengesWindow.Visibility = Visibility.Collapsed;
+            clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
+            clickPlay.Play();
+        }
+        private void DifficutlyLevelRelax_Click(object sender, RoutedEventArgs e)
         {
             clickPlay.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/Sounds/click.mp3"));
             clickPlay.Play();

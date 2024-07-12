@@ -38,8 +38,11 @@
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_browser.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_calendar.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_firewall.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_gamemode_Relax.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico32_mediaplayer.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico_challenge.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico_mymenu.png" />
+    <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico_post.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\ico_settings.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\pauseicon.png" />
     <None Remove="OperatingSystems\System95Plus\Resources\Icons\soundicon.off.png" />
@@ -115,8 +118,11 @@
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_browser.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_calendar.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_firewall.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_gamemode_Relax.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico32_mediaplayer.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico_challenge.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico_mymenu.png" />
+    <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico_post.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\ico_settings.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\pauseicon.png" />
     <Content Include="OperatingSystems\System95Plus\Resources\Icons\soundicon.off.png" />
