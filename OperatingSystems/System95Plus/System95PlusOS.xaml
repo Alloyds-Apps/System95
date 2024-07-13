@@ -88,7 +88,7 @@
                             </Button.Style>
                         </Button>
                     </Grid>
-                    <Image Width="56" Height="56" Margin="45,58,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Source="ms-appx:///OperatingSystems/System95Plus/Resources/Icons/starticon_6.png"/>
+                    <Image Width="32" UseLayoutRounding="False" Height="100" Margin="45,58,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Source="ms-appx:///OperatingSystems/System95Plus/Resources/Icons/starticon_6.png"/>
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0">
                         <RadioButtons x:Name="PowerChoices" SelectedIndex="0">
                             <RadioButton GroupName="PowerChoice" Click="RestartOS_Click" x:Name="RestartOS" FontFamily="ms-appx:///OperatingSystems/System95Plus/Resources/Fonts/progresspixel.ttf#progresspixel" FontSize="15" Content="Restart" Foreground="Black" RequestedTheme="Light">
@@ -136,10 +136,10 @@
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Fill">
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="#000073" />
@@ -169,10 +169,10 @@
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Fill">
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="#000073" />
@@ -202,10 +202,10 @@
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Fill">
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="#000073" />
@@ -234,6 +234,12 @@
                         Storyboard.TargetProperty="Opacity"
                         To="1"
                         Duration="0" />
+                                                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
+                                                                        </ObjectAnimationUsingKeyFrames>
+                                                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
+                                                                        </ObjectAnimationUsingKeyFrames>
                                                                     </Storyboard>
                                                                 </VisualState>
                                                                 <VisualState x:Name="Unchecked" />
@@ -253,24 +259,40 @@
                   Width="20"
                   Height="20"
                   UseLayoutRounding="False"
-                  Stroke="{ThemeResource RadioButtonOuterEllipseStroke}"
-                  Fill="{StaticResource RadioButtonOuterEllipseFill}"
-                  StrokeThickness="{ThemeResource RadioButtonBorderThemeThickness}" />
+                  Fill="#C0C0C0"
+                  StrokeThickness="0" />
+                                                            <Border
+                                                                Width="20"
+                                                                Height="20"
+                                                                UseLayoutRounding="True"
+                                                                BorderBrush="#000000"
+                                                                BorderThickness="2, 2, 0, 0"
+                                                                CornerRadius="10"/>
+                                                            <Border
+                                                                Width="20"
+                                                                Height="20"
+                                                                BorderBrush="#FFFFFF"
+                                                                BorderThickness="0, 0, 2, 2"
+                                                                CornerRadius="10" UseLayoutRounding="True"/>
+                                                            <Border
+                                                                Width="20"
+                                                                Height="20"
+                                                                UseLayoutRounding="False"
+                                                                Background="#C0C0C0"
+                                                                BorderThickness="2, 2, 2, 2"
+                                                                CornerRadius="10"/>
                                                             <Ellipse x:Name="CheckOuterEllipse"
                   Width="20"
                   Height="20"
                   UseLayoutRounding="False"
-                  Stroke="{ThemeResource RadioButtonOuterEllipseCheckedStroke}"
-                  Fill="{ThemeResource RadioButtonOuterEllipseCheckedFill}"
+                  Fill="#C0C0C0"
                   Opacity="0"
-                  StrokeThickness="{ThemeResource RadioButtonBorderThemeThickness}" />
+                  StrokeThickness="2" />
                                                             <Ellipse x:Name="CheckGlyph"
                   Width="10"
                   Height="10"
                   UseLayoutRounding="False"
-                  Opacity="0"
-                  Fill="{ThemeResource RadioButtonCheckGlyphFill}"
-                  Stroke="{ThemeResource RadioButtonCheckGlyphStroke}"/>
+                  Opacity="0"/>
 
                                                         </Grid>
                                                         <ContentPresenter x:Name="ContentPresenter"
@@ -338,10 +360,10 @@
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Fill">
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="#000073" />
@@ -371,10 +393,10 @@
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Fill">
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="#000073" />
@@ -404,10 +426,10 @@
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
-                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
                                                                         </ObjectAnimationUsingKeyFrames>
                                                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckGlyph" Storyboard.TargetProperty="Fill">
                                                                             <DiscreteObjectKeyFrame KeyTime="0" Value="#000073" />
@@ -436,6 +458,12 @@
                         Storyboard.TargetProperty="Opacity"
                         To="1"
                         Duration="0" />
+                                                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Stroke">
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
+                                                                        </ObjectAnimationUsingKeyFrames>
+                                                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckOuterEllipse" Storyboard.TargetProperty="Fill">
+                                                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Transparent" />
+                                                                        </ObjectAnimationUsingKeyFrames>
                                                                     </Storyboard>
                                                                 </VisualState>
                                                                 <VisualState x:Name="Unchecked" />
@@ -455,24 +483,40 @@
                   Width="20"
                   Height="20"
                   UseLayoutRounding="False"
-                  Stroke="{ThemeResource RadioButtonOuterEllipseStroke}"
-                  Fill="{StaticResource RadioButtonOuterEllipseFill}"
-                  StrokeThickness="{ThemeResource RadioButtonBorderThemeThickness}" />
+                  Fill="#C0C0C0"
+                  StrokeThickness="0" />
+                                                            <Border
+                                                                Width="20"
+                                                                Height="20"
+                                                                UseLayoutRounding="True"
+                                                                BorderBrush="#000000"
+                                                                BorderThickness="2, 2, 0, 0"
+                                                                CornerRadius="10"/>
+                                                            <Border
+                                                                Width="20"
+                                                                Height="20"
+                                                                BorderBrush="#FFFFFF"
+                                                                BorderThickness="0, 0, 2, 2"
+                                                                CornerRadius="10" UseLayoutRounding="True"/>
+                                                            <Border
+                                                                Width="20"
+                                                                Height="20"
+                                                                UseLayoutRounding="False"
+                                                                Background="#C0C0C0"
+                                                                BorderThickness="2, 2, 2, 2"
+                                                                CornerRadius="10"/>
                                                             <Ellipse x:Name="CheckOuterEllipse"
                   Width="20"
                   Height="20"
                   UseLayoutRounding="False"
-                  Stroke="{ThemeResource RadioButtonOuterEllipseCheckedStroke}"
-                  Fill="{ThemeResource RadioButtonOuterEllipseCheckedFill}"
+                  Fill="#C0C0C0"
                   Opacity="0"
-                  StrokeThickness="{ThemeResource RadioButtonBorderThemeThickness}" />
+                  StrokeThickness="2" />
                                                             <Ellipse x:Name="CheckGlyph"
                   Width="10"
                   Height="10"
                   UseLayoutRounding="False"
-                  Opacity="0"
-                  Fill="{ThemeResource RadioButtonCheckGlyphFill}"
-                  Stroke="{ThemeResource RadioButtonCheckGlyphStroke}"/>
+                  Opacity="0"/>
 
                                                         </Grid>
                                                         <ContentPresenter x:Name="ContentPresenter"
