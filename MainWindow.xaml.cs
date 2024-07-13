@@ -41,6 +41,7 @@ namespace System95
             this.InitializeComponent();
             ExtendsContentIntoTitleBar = true;
             this.CenterOnScreen();
+            this.Move((int)this.AppWindow.Position.X, (int)this.AppWindow.Position.Y - 24);
             this.AppWindow.SetIcon("Assets/icon.ico");
             SetTitleBar(AppTitleBar);
             AppWindow.Resize(new SizeInt32(1280, 730));
