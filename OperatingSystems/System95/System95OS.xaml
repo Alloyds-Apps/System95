@@ -18,7 +18,7 @@
                 <Border x:Name="ShutDownWindowBorderLeftAndTop" BorderThickness="2,2,0,0" BorderBrush="White"/>
                 <Grid x:Name="ShutDownWindowGrid" Background="#C0C0C0" VerticalAlignment="Stretch" Margin="2,2,1,1" HorizontalAlignment="Stretch">
                     <Grid x:Name="ShutDownWindowTitleBar" Background="#000080" Height="29" Width="332" Margin="0,1,2,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
-                        <TextBlock Text="Restart/Shutdown" HorizontalAlignment="Left" FontWeight="Black" Margin="5,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel"/>
+                        <TextBlock Text="Restart/Shutdown" HorizontalAlignment="Left" FontWeight="Black" Margin="5,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel"/>
                         <Button x:Name="CloseShutDownWindow" IsTabStop="False" UseSystemFocusVisuals="False" Height="21" Width="25" Margin="0,5,4,3" HorizontalAlignment="Right" Click="CloseShutDownWindow_Click">
                             <Button.Resources>
                                 <ResourceDictionary>
@@ -35,7 +35,7 @@
                                     <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                                 </ResourceDictionary>
                             </Button.Resources>
-                            <FontIcon FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/marlett.tff#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
+                            <FontIcon FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/marlett.ttf#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Template">
@@ -106,7 +106,7 @@
                                     <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                                 </ResourceDictionary>
                             </Button.Resources>
-                            <TextBlock FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel" Text="Restart" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Text="Restart" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Template">
@@ -174,7 +174,7 @@
                                     <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                                 </ResourceDictionary>
                             </Button.Resources>
-                            <TextBlock FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel" Text="Shutdown" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Text="Shutdown" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Template">
@@ -239,7 +239,7 @@
                     <Grid x:Name="SettingsWindowTitleBar" Background="#000080" Height="29" Width="429" Margin="0,1,2,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="ms-appx:///OperatingSystems/System95/Resources/Icons/ico_settings.png" Height="24" Width="24" VerticalAlignment="Center"/>
-                            <TextBlock Text="Settings" HorizontalAlignment="Left" FontWeight="Black" Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel"/>
+                            <TextBlock Text="Settings" HorizontalAlignment="Left" FontWeight="Black" Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel"/>
                         </StackPanel>
                         <Button x:Name="CloseSettingsWindow" IsTabStop="False" UseSystemFocusVisuals="False" Height="21" Width="25" Margin="0,5,4,3" HorizontalAlignment="Right" Click="CloseSettingsWindow_Click">
                             <Button.Resources>
@@ -257,7 +257,7 @@
                                     <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                                 </ResourceDictionary>
                             </Button.Resources>
-                            <FontIcon FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/marlett.tff#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
+                            <FontIcon FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/marlett.ttf#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Template">
@@ -323,7 +323,7 @@
                     <Grid x:Name="MyMenuWindowTitleBar" Background="#000080" Height="29" Width="404" Margin="0,1,2,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="ms-appx:///OperatingSystems/System95/Resources/Icons/ico_mymenu.png" Height="24" Width="24" VerticalAlignment="Center"/>
-                            <TextBlock Text="My menu" HorizontalAlignment="Left" FontWeight="Black" Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel"/>
+                            <TextBlock Text="My menu" HorizontalAlignment="Left" FontWeight="Black" Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel"/>
                         </StackPanel>
                         <Button x:Name="CloseMyMenuWindow" IsTabStop="False" UseSystemFocusVisuals="False" Height="21" Width="25" Margin="0,5,4,3" HorizontalAlignment="Right" Click="CloseMyMenuWindow_Click">
                             <Button.Resources>
@@ -341,7 +341,7 @@
                                     <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                                 </ResourceDictionary>
                             </Button.Resources>
-                            <FontIcon FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/marlett.tff#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
+                            <FontIcon FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/marlett.ttf#Marlett" Glyph="&#x0072;" FontSize="16" Margin="-3,-3,-2,-2"/>
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Template">
@@ -1010,8 +1010,8 @@ AutomationProperties.AccessibilityView="Raw" />
                     <RotateTransform Angle="-90"/>
                 </Grid.RenderTransform>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="System" VerticalAlignment="Center" FontWeight="Bold" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel" Margin="8,0,0,0" FontSize="22"/>
-                    <TextBlock Text="95" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel" Margin="4,0,0,0" FontSize="22"/>
+                    <TextBlock Text="System" VerticalAlignment="Center" FontWeight="Bold" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Margin="8,0,0,0" FontSize="22"/>
+                    <TextBlock Text="95" VerticalAlignment="Center" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Margin="4,0,0,0" FontSize="22"/>
                 </StackPanel>
             </Grid>
             <StackPanel x:Name="Options" Margin="44,3,0,4">
@@ -1636,7 +1636,7 @@ AutomationProperties.AccessibilityView="Raw" />
                                 <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                             </ResourceDictionary>
                         </Button.Resources>
-                        <TextBlock Text="EN" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel" Margin="-6,0,-6,0"/>
+                        <TextBlock Text="EN" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Margin="-6,0,-6,0"/>
                     </Button>
                     <Button x:Name="SoundToggle" Click="SoundToggle_Click" Background="Transparent" BorderBrush="Transparent" IsTabStop="False" UseSystemFocusVisuals="False" Height="35" Width="35">
                         <Image Source="ms-appx:///OperatingSystems/System95/Resources/Icons/soundicon.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="28" Height="28" Margin="-7,-5,-13,-2"/>
@@ -1653,7 +1653,7 @@ AutomationProperties.AccessibilityView="Raw" />
                             </ResourceDictionary>
                         </Button.Resources>
                     </Button>
-                    <TextBlock x:Name="Time" Text="10:00 AM" Foreground="Black" HorizontalAlignment="Right" FontSize="17" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel" Margin="0,8,0,0"/>
+                    <TextBlock x:Name="Time" Text="10:00 AM" Foreground="Black" HorizontalAlignment="Right" FontSize="17" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel" Margin="0,8,0,0"/>
                 </StackPanel>
                 <Border x:Name="TrayBorderRightAndBottom" BorderThickness="0,0,2,2" BorderBrush="#E9E9E9"/>
             </Grid>

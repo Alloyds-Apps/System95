@@ -28,7 +28,7 @@
                         <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                     </ResourceDictionary>
                 </Button.Resources>
-                <TextBlock Text="Turn On" FontSize="18" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.tff#progresspixel"/>
+                <TextBlock Text="Turn On" FontSize="18" FontFamily="ms-appx:///OperatingSystems/System95/Resources/Fonts/progresspixel.ttf#progresspixel"/>
             </Button>
         </StackPanel>
     </Grid>
